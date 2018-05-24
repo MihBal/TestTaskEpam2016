@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+     <link rel="stylesheet" href="css/bootstrap-theme.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.waterwheelCarousel.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+        <script type="text/javascript">
+      $(document).ready(function () {
+        var carousel = $("#carousel").waterwheelCarousel({
+          flankingItems: 3,
+          movingToCenter: function ($item) {
+            $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedToCenter: function ($item) {
+            $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movingFromCenter: function ($item) {
+            $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedFromCenter: function ($item) {
+            $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          clickedCenter: function ($item) {
+            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+          }
+        });
+
+        $('#prev').bind('click', function () {
+          carousel.prev();
+          return false
+        });
+
+        $('#next').bind('click', function () {
+          carousel.next();
+          return false;
+        });
+
+        $('#reload').bind('click', function () {
+          newOptions = eval("(" + $('#newoptions').val() + ")");
+          carousel.reload(newOptions);
+          return false;
+        });
+
+      });
+    </script>
+
+</head>
+<body >
+
+<section class="header">
+  <div class="container top-line">
+    <div class="row">
+    <div class="col-md-3 no-padding">
+	      <div class="logo-wrap">
+	        	<a href="" class="logo-link">
+	        		<img src="images/logo.png" alt="" class="logo img">
+	        	</a>
+	      </div>
+	 </div> 
+	   <div class="col-md-6 no-padding">
+	      <div class="menu-wrap">
+	      		<ul class="menu-main">
+	      			<li><a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>&nbsp;Компания</a></li>
+	      			<li><a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>&nbsp;Услуги</a></li>
+	      			<li><a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>&nbsp;Портфолио</a></li>
+	      		</ul>      	
+		
+	      </div>
+		</div>
+	    <div class="col-md-3  no-padding">
+	      <div class="account">
+	      	<a href="">Вход</a>
+	      	<a href="">Регистрация</a>
+	      </div>
+	      <div class="language">
+	      	<a href="">Русс.</a>
+	      	<a href="">/ Англ.</a>
+	      </div>
+		<div class="search">
+			<a href="">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</a>
+		</div>
+    </div>
+    </div>
+  </div>
+
+</section>
+<section class="slider">
+<div id="headerCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#headerCarousel" data-slide-to="1"></li>
+      <li data-target="#headerCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="images/slide.png" alt="Los Angeles" width="100%">
+        <div class="carousel-caption slide1">
+          <h1 class="slide-head">WEB-РАЗРАБОТКИ</h1>
+          <p>Мы создаем сайты и веб сервисы. Наш опыт и подходы к разработке позволяют создавать как впечатляющие технологичные промо-сайты, так и эмоциональные высоконагруженные сервисы.</p>
+        </div>
+      </div>
+
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#headerCarousel" data-slide="prev">
+    	<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </a>
+    <a class="right carousel-control" href="#headerCarousel" data-slide="next">
+  		<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
+<section class="how-we-work">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<span>КАК МЫ РАБОТАЕМ</span>
+			</div>
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-3 no-padding " >
+						<div class="time-line-top  first ">
+							<span>ПРОСТО</span>
+						
+						</div>
+						<div class="time-line-bottom first">
+							<span>Обсуждение проекта<br>
+								Расчет стоимости</span>
+						</div>
+					</div>
+					<div class="col-md-3 no-padding">
+						<div class="time-line-top ">
+							<span>ОФИЦИАЛЬНО</span>
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</div>
+						<div class="time-line-bottom second">
+							<span>Разработка техзадания<br>Подписание документов</span>
+						</div>
+					</div>
+					<div class="col-md-3 no-padding">
+						<div class="time-line-top  ">
+						
+							<span>БЫСТРО</span>
+<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</div>
+						<div class="time-line-bottom">
+							<span>Профессиональная разработка<br>
+								с полным контролем качества</span>
+						</div>
+					</div>
+					<div class="col-md-3 no-padding ">
+						<div class="time-line-top last">
+						
+							<span>КАЧЕСТВЕННО</span>
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</div>
+						<div class="time-line-bottom last">
+							<span>Качественный результат<br>
+с гарантией и поддержкой</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="our-services">
+	<div class="container">
+		<div class="row">
+			<h1>НАШИ ОСНОВНЫЕ УСЛУГИ</h1>
+			<div class="col-md-12   no-padding service-wrap">
+				<div class="service-col">
+				<i class="fa fa-thumbs-o-up service-icon" aria-hidden="true"></i>
+				<h2>WEB-РАЗРАБОТКИ</h2>
+				<p>Наш опыт и подход к разработке позволяют создавать грамотные, впечатляющие, технологичные промо-сайты</p>
+<a href="" class="btn">Узнать больше</a>
+			</div>
+			<div class="service-col">
+				<i class="fa fa-android service-icon" aria-hidden="true"></i>
+				<h2>ANDROID-ПРИЛОЖЕНИЯ</h2>
+				<p>Быть в информационном поле пользователя — основная задача вашего бренда. 
+Разработка и дизайн мобильных приложений.</p>
+<a href="" class="btn">Узнать больше</a>
+</div>
+			
+			<div class="service-col">
+				<i class="fa fa-calculator service-icon" aria-hidden="true"></i>
+				<h2>АУТСОРСИНГ 1С</h2>
+				<p>Аутсорсинг 1С – наш специалист выполнит только необходимую Вам работу. Ваш заказ будет выполнен точно в срок, вне зависимости от внешних обстоятельств.</p>
+				<a href="" class="btn">Узнать больше</a>
+				</div>
+		
+	
+			<div class="service-col ">
+				<i class="fa fa-users service-icon" aria-hidden="true"></i>
+				<h2>ОБЪЕДИНЕНИЕ</h2>
+				<p>Веб-интеграция — объединение разнородных веб-приложений и систем в единую среду на базе веб. Мы объединим ваши: Сайт,</p>
+				<a href="" class="btn">Узнать больше</a>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+
+</section>
+<section class="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-align-wrap  no-padding ">
+				<div class="col-align rounded">
+				<i class="fa fa-male" aria-hidden="true"></i>
+				<div>
+				<h3>СДЕЛАТЬ ЗАПРОС</h3>
+				<span>+ ПОЛУЧИТЕ  БЕСПЛАТНЫЙ  АУДИТ САЙТА</span></div>
+				</div>
+				<div class="col-align rounded"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+				<div><h3>СКАЧАТЬ БРИФЫ</h3>
+				<span>ПОЖАЛУЙСТА, ЗАПОЛНИТЕ	БРИФ И ОТПРАВЬТЕ НАМ</span></div>
+			</div>
+				<div class="col-align rounded">
+				<i class="fa fa-phone-square" aria-hidden="true"></i>
+				<div>
+				<h3>ЗАКАЗАТЬ ЗВОНОК</h3>
+				<span>УКАЖИТЕ УДОБНОЕ ВАМ ВРЕМЯ И ТЕЛЕФОН</span></div>
+			</div>
+				<div class="col-align">
+				<h3>КОНСУЛЬТИРУЕМ БЕСПЛАТНО</h3>
+				<span class="phone">+7 911 9290047</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="face">
+		<div class="container">
+			<div class="row faces">
+				<div class="col-md-12">
+					<h1>КОМПАНИЯ KITLAN В ЛИЦАХ</h1>
+					<p>Многим сложно общаться с людьми не видя их лиц. Давайте знакомиться! Все эти хорошие люди делают для вас хорошую работу. ;-)</p>	
+					<div id="carousel">
+						<img src="images/image1.jpg" alt="Image 1" />
+						<img src="images/image2.jpg" alt="Image 2" />
+						<img src="images/image3.jpg" alt="Image 3" />
+
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<section class="mainblock">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 main-text">
+				<h4>Почему выбирают нас?</h4>
+							
+							<ul>
+						
+ <li>100% клиентоориентированность – это главный секрет успеха проектов, которые мы создаем для наших клиентов. </li>
+ <li>Наши специалисты даже после сдачи проекта бесплатно проконсультируют Вас по возникающим вопросам.</li>
+ <li>Гарантия качества работ. 5 лет успешной работы. Реализовано 284 проекта в 14 сферах бизнеса.</li>
+</ul>
+			
+
+
+<ul>
+	
+	<li>Официальный договор является гарантией соблюдения сроков и неизменности цены создания сайтов на заказ.</li>
+	<li>Экспертность. 5 лет мы сотрудничаем с топовыми SEO-компаниями, поэтому мы грамотно проектируем сайты.</li>
+	<li>Все сотрудники в штате, весь процесс работы ежеминутно под контролем руководителя проектной группы.</li>
+</ul>
+
+<ul>
+	<li>Мы умеем объединять различные веб-приложения (сайт + 1С бухгалтерия + Андроид) в единую среду на базе веб.</li>
+	<li>Доступность. Мы всегда связи с Вами. Вы можете связаться с Руководителем проектной группы вашего проекта.</li>
+	<li>Бесплатное обучение. После сдачи веб-ресурса мы предоставляем Руководство пользователя, и проводим обучение сотрудников по работе с проектом.</li>
+</ul>
+
+
+
+
+
+
+			</div>
+			<div class="col-md-3 sidebar  no-padding">
+<h4>Что говорят о нас клиенты:</h4>
+<div class="quote">
+	Компания «КИТЛАН» сделала работу лучше других. Не менее важным и приятным оказалось оперативное реагирование сотрудников компании на наши новые идеи и предложения, которые возникали в ходе работы по созданию нового сайта. 
+</div>
+<div class="autor">
+	<img src="images/avatar1.png" alt="" style="float:right">
+	<h4>Калашникова<br>Анастасия </h4>
+	<p>Управляющий проекта Английский в картинках</p>
+	<a href="" class="read-more">Читать целиком</a>
+	<a href="">Смотреть все отзывы</a>
+	<div style="clear:both"></div>
+</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 no-padding">
+
+				<h4>Наши клиенты</h4>
+</div><div class="col-md-10 no-padding">
+				<div class="line"></div>
+			<div class="controls-clients">
+				<a href="" class="btn-prv"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				<a href="" class="btn-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-md-12 no-padding clients">
+				<img src="images/client1.jpg" alt="" class="clientImg">
+				<img src="images/client2.jpg" alt="" class="clientImg">
+				<img src="images/client3.jpg" alt="" class="clientImg">
+				<img src="images/client4.jpg" alt="" class="clientImg">
+				<img src="images/client5.jpg" alt="" class="clientImg">
+				<img src="images/client6.jpg" alt="" class="clientImg">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="foot">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 no-padding foot">
+			<img src="images/logo.png" alt="">
+			<p>Мы создаем грамотные сайты и Андроид-приложения. Проводим аутсорсинг 1С – выполняем только необходимую Вам работу. Объединяем: Сайт, 1С-бухгалтерию и Андроид 
+в одну, удобную информационную платформу.</p>
+			</div>
+
+			<div class="col-md-2 no-paddin menu-right">
+			<h5>Разделы:</h5>
+	<ul>
+				<li><a href="">ГЛАВНАЯ</a></li>
+<li><a href="">КОМПАНИЯ</a></li>
+<li><a href="">УСЛУГИ</a></li>
+<li><a href="">ПОРТФОЛИО</a></li>
+			</ul>
+			</div>
+				
+		</div>
+	</div>
+</section>
+<section class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 no-padding">
+				<a href="" style="float:left">© “KITLAN” Дизайн и программирование, 2015 г. Все права защищены.</a>
+			
+				
+				<a href=""><img src="images/soc4.png" style="float:right" alt=""></a>
+				<a href=""><img src="images/soc3.png" style="float:right" alt=""></a>
+				<a href=""><img src="images/soc2.png" style="float:right" alt=""></a>
+					<a href=""><img src="images/soc1.png" style="float:right" alt=""></a>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>
